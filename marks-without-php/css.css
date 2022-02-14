@@ -1,0 +1,357 @@
+/* Звездочка означает применение ко всем блокам, поставив такую конструкцию кода 
+в самом начале мы обнуляем отступы и прописываем box-sizing: border-box, 
+что говорит браузеру учитывать любые границы и внутренние отступы в значениях, 
+которые мы указали в ширине и высоте элемента. 
+Если выставить элементу ширину 100 пикселей, то эти 100 пикселей будут включать в 
+себя границы и внутренние отступы, а контент сожмётся, чтобы выделить для них место */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* Тут прописываем цвет фона */
+
+body {
+    background-color: white;
+    /* background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    ЭТО НЕ ТРОГАТЬ, ОНО НЕ НУЖНОЕ*/
+}
+
+
+/* Оформление для заголовков, пока что их нету */
+
+h1 {
+    margin-top: 50px;
+    margin-left: 300px;
+    color: white;
+    font-size: 50px;
+    text-align: left;
+    text-shadow: 0 0 5px black;
+    font-family: "Comic Sans MS";
+}
+
+h2 {
+    opacity: 50%;
+    margin-top: 10px;
+    margin-left: 300px;
+    color: white;
+    font-size: 30px;
+    text-align: left;
+    text-shadow: 0 0 5px black;
+    font-family: "Bahnschrift";
+}
+
+/*h3 {
+    opacity: 50%;
+    margin-top: 0px;
+    margin-right: 110px;
+    color: white;
+    font-size: 30px;
+    text-align: right;
+    text-shadow: 0 0 5px black;
+    font-family: "Bahnschrift";
+}
+*/
+
+/* Оформление параграфов (просто текста через <p></p>) */
+
+/*p {
+    opacity: 100%;
+    margin-top: 10px;
+    margin-left: 300px;
+    margin-right: 300px;
+    color: white;
+    font-size: 18px;
+    text-align: left;
+    text-shadow: 0 0 5px black;
+    font-family: "Bahnschrift";
+}
+
+*/
+/* С этого момента следуют стили для самого верха с логотипом и входом */
+
+.toplogo {
+    /* определяет, необходимо ли для переполненного блочного элемента содержимое обрезать, 
+    предоставить полосы прокрутки или просто отобразить. 
+    Hidden говорит что нужно все обрезать и скрыть лишнее*/
+    overflow: hidden;
+    /* Используемый шрифт */
+    font-family: "Century Gothic";
+    /* Отступы слева и справа, что бы контент был по середине */
+    margin-left: 300px;
+    margin-right: 300px;
+}
+
+
+/* Здесь параметры для логотипа */
+
+.toplogo .logo {
+    /* Размер логотипа по высоте */
+    height: 100px;
+}
+
+
+/* Здесь параметры для активных кнопок */
+
+.toplogo a {
+    /* Float говорит с какой стороны закреплять элемент, в данном случае логотип закреплен слева */
+    float: left;
+    /* Размер шрифта */
+    font-size: 20px;
+    /* Отступы */
+    margin-top: 100px;
+}
+
+
+/* Здесь параметры для кнопки входа */
+
+.toplogo a.right {
+    /* Выравниваем по высоте */
+    line-height: 100px;
+    /* Закрепляем справа */
+    float: right;
+    /* Снова размер текста */
+    font-size: 20px;
+    /* Задаем что бы после посещения цвет ссылки не менялся, точнее менялся на тот, который был раньше */
+    color: black;
+    /* Снимаем все текстовые декорации, в том числе подчеркивание ссылки после ее посещения */
+    text-decoration: none;
+}
+
+
+/* С этого момента следуют стили для фиолетовой панели навигации */
+
+.topnav {
+    /* Задаем цвет фона у блока */
+    background: rgb(79, 113, 209);
+    /* Обрезаем, скрываем слайдеры */
+    overflow: hidden;
+    /* Выставляем шрифт */
+    font-family: "Bahnschrift";
+    /* Тень от текста */
+    text-shadow: 0 0 5px black;
+    /* Отступы */
+    margin-left: 300px;
+    margin-right: 300px;
+    /* Ширина и цвет границ*/
+    border-radius: 10px;
+    /* Радиус границ*/
+    box-shadow: 0 0 15px rgb(79, 113, 209);
+}
+
+
+/* Параметры для использованных кнопок в панели навигации */
+
+.topnav a {
+    /* Через text-transform делаем что бы весь текст был в верхнем регистре, 
+    если нужно будет поменять, не придется переписывать весь текст вручную без капса */
+    text-transform: uppercase;
+    /* закрепляем слева */
+    float: left;
+    /* Указываем белый цвет текста */
+    color: white;
+    /* Закрепляем текст по центру (ЕЩЕ РАЗ Я УВИЖУ У КОГО НИБУДЬ ТЕГ <CENTER> ПРЯМО В ЧИСТОВОМ HTML Я НАЧНУ УБИВАТЬ) */
+    text-align: center;
+    /* Делаем внутренние отступы */
+    padding: 20px 20px;
+    /* Убираем все декорации с текста */
+    text-decoration: none;
+    /* Выставляем размер шрифта */
+    font-size: 20px;
+}
+
+
+/* Параметры для активных кнопок в панели навигации, то есть, если на них навелись мышкой */
+
+.topnav a:hover {
+    /* Затемним выбранную кнопку на панели выбрав цвет потемнее */
+    background-color: rgb(54, 83, 161);
+}
+
+.container-2 {
+    display: block;
+    /*Фигня, не трогать. width: 550px;*/
+    width: 40%;
+    /* Распределяем по середине страницы */
+    margin: 0 auto; 
+    /* Распределяем по середине внутри блока */
+    text-align: center;
+    background: rgb(79, 113, 209);
+    /* Создаем границы блока двойными и белыми */
+    border: 10px double white;
+    /* Округляем границы */
+    border-radius: 10px;
+    /* Выставляем шрифт */
+    font-family: "Bahnschrift";
+    font-size: 18px;
+    /* Тень от текста */
+    text-shadow: 0 0 5px black;
+    color: white; 
+}
+.container-2 a {
+    /* Убираем выделение ссылки */
+    text-decoration: none;
+    color: blue;
+}
+.container-2 a:hover {
+    color: rgb(172, 172, 240);
+}
+.container-2 input[type=text], input[type=password], input[type=email] {
+    /* Ширина полей для ввода */
+    width: 300px;
+    /* Внутренние отступы  */
+    padding: 10px;
+    margin: 20px 0 20px 10px;
+    /* Убираем границы полей  */
+    border: none;
+    background: white;
+    text-align: center;
+}
+.container-2 input[type=submit] {
+    padding: 10px;
+    font-size: 16px;
+}
+.container-2 input[type=submit]:hover {
+    background: rgb(172, 172, 240);
+}
+.full-block {
+    position: absolute;
+    left: 20%;
+    top: 32%;
+}
+.full-block a {
+    text-decoration: none;
+    color: rgb(52, 81, 160);
+}
+.full-block li {
+    list-style-type: none;
+}
+.full-block a:hover{ 
+    color: rgb(255, 129, 56);
+}
+.tabs {
+    border-bottom: 1px solid rgb(206, 206, 206);
+    width: 60%;
+}
+.tabs li {
+    display: inline-block;
+    padding: 3px;
+    border: 2px solid rgb(206, 206, 206);
+    border-radius: 4px 4px 0 0px;   
+    background: linear-gradient(to bottom, rgb(179, 198, 223) 50%,rgb(169, 194, 226) 20%, rgb(124, 153, 192) 80%);
+}
+.tabs li:hover {
+    background: linear-gradient(to top, rgb(179, 198, 223) 50%,rgb(169, 194, 226) 20%, rgb(124, 153, 192) 80%);
+}
+.tabs a {
+    font-size: 18px;
+    color: rgb(67, 103, 202);
+}
+.marks_tables table {
+    border-collapse: collapse;
+}
+.marks_tables td {
+    padding: 5px;
+}
+.marks_tables {
+    top: 35%;
+    bottom: 10%;
+}
+.marks_tables h3 {
+    max-width: 180px;
+    color: white;
+    text-shadow: 0 0 5px black;
+    font-family: "Bahnschrift";
+}
+.marks_tables tr:hover {
+    background: rgb(248, 225, 162); 
+}
+
+.all-block {
+    display: inline-block;
+    margin-top: 3%;
+    margin-left: 2%;
+}
+.days {
+    width:max-content;
+    box-shadow: inset 0 0 3px black;
+    outline: 1px solid rgb(151, 151, 151);
+    border:  7px solid rgb(169, 194, 226);
+    border-radius: 8px;
+    color: rgb(52, 81, 160);
+    font-weight: bolder;
+    font-size: 18px;
+}
+.days a {
+    color: rgb(52, 81, 160);
+}
+#special {
+    width: 490px;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    text-shadow: 0 0 5px black;
+    font-family: "Bahnschrift";
+    margin-bottom: 5%;
+    padding: 15px;
+}
+#get_money {
+    background: linear-gradient(to bottom, rgb(255, 144, 70) 60%,rgb(253, 97, 25) 40%, rgb(255, 60, 1) 80%);
+    color: white;
+    border-color:rgb(255, 102, 0);
+}
+#get_money a {
+    color: white;
+}
+#get_money:hover {
+    background: linear-gradient(to top, rgb(255, 144, 70) 60%,rgb(253, 97, 25) 40%, rgb(255, 60, 1) 80%);
+}
+.active_2 li {
+    background: linear-gradient(to bottom, rgb(247, 121, 37) 60%,rgb(169, 194, 226) 20%, rgb(124, 153, 192) 80%);
+}
+.tabs-2 {
+    margin-top: 2%;
+}
+.tabs-2 li {
+    display: inline;
+}
+.table-2 table {
+    margin-top: 3%;
+    width: 900px;
+    border-collapse: collapse;
+    border: 1px solid grey;
+}
+.table-2 td {
+    text-align: center;
+    padding: 5px 10px;
+    border: 1px solid grey;
+}
+.table-2 th {
+    background:  rgb(215, 232, 255);
+    font-weight: 100;
+    padding: 5px 10px;
+    border: 1px solid grey;
+}
+.table-3 table {
+    margin-top: 3%;
+    width: 900px;
+    border-collapse: collapse;
+    border: 1px solid grey;
+}
+.table-3 td {
+    text-align: center;
+    padding: 5px 10px;
+    border: 1px solid grey;
+}
+.table-3 th {
+    background:  rgb(215, 232, 255);
+    font-weight: 100;
+    padding: 5px 10px;
+    border: 1px solid grey;
+}
