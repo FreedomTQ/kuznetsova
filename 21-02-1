@@ -1,5 +1,12 @@
 <?php
+$sn="localhost";
+$db="";
+$u="root";
+$p="";
 
+$my_sqli_connect($sn, $db, $u, $p);
+
+$evaluations = $db->query("SELECT * FROM `evaluations`");
 ?>
 
 <!DOCTYPE html>
@@ -14,22 +21,7 @@
 </head>
 
 <body>
-    <!-- toplogo это самый верхний блок сайта, где находится логотип и кнопка с авторизацией -->
-    <div class="toplogo">
-        <a class="active" href="index.php">
-            <img class="logo" src="img/logo.png" alt="Главная">
-        </a>
-        <a class="right" href="reg.php">Регистрация</a>
-        <a class="right" href="signin.php">Авторизация/</a>
-    </div>
-    <!-- topnav это фиолетовая панель навигации со ссылками на другие страницы -->
-    <div class="topnav">
-        <a href="blog.php">Блог</a>
-        <a href="library.php">Библиотека</a>
-        <!-- marks переводится как оценки, слишком длинный перевод для успеваемости -->
-        <a href="marks.php">Успеваемость</a>
-        <a href="calendar.php">Календарь мероприятий</a>
-    </div>
+  
 
     <div class="full-block">
 
@@ -54,12 +46,15 @@
     <tbody>
     <!-- 1 урок-->
     <tr>
-    <td width="25%"><a href="#" class="">Предмет</a></td>
-    <td width="15%"></td>
-    <!--Добавить оценкам в зависимости от выставленной цвет-->
-    <td width="15%"><a href="#" class="" id="marks">Оценка</a></td>
-    <td width="25%"></td>
-    <td width="30%"><a href="#" class="">ДЗ</a></td>
+    <?
+foreach($evaluations as $marks){
+    echo "<tr>
+    <th scope='row'>".$marks['id_stud']."</th>
+    <td>".$marks['id_teach']."</td>
+    <td>".$marks['Evaluation']."</td>
+    <td>".$marks['Date']."</td>
+  </tr>";  
+}?>
     </tr>
         <!-- 2 урок-->
     <tr>
