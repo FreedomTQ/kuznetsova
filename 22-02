@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+    header {
+    right: 0; top: 0;
+    position: fixed;
+    height: 8em;
+    width: 100%;
+    background: linear-gradient(to right,red 5%,rgb(255, 159, 68) 70% , rgb(255, 185, 34) 80%);
+    text-align: center;
+    }
+    header h1 {
+    color: white;
+    font-family: "Monotype Corsiva";
+    font-size: 54px;
+    }
+    footer {
+    right: 0; bottom: 0;
+    position: fixed;
+    height: 2em;
+    width: 100%;
+    background: linear-gradient(to right,red 5%,rgb(255, 159, 68) 70% , rgb(255, 185, 34) 80%);
+    }
+    .main-info {
+    display: flex;
+        
+    }
+    .main-info img {
+    position: relative;
+    margin-left: 5%;
+    margin-top: 11%;
+    height: 600px;
+    z-index: -1;
+    }
+    .main-info p {
+    position: relative;
+    margin-left: 15%;
+    margin-top: 18%;
+    max-height: 265px;
+    max-width: 450px;
+    font-family: "Monotype Corsiva";
+    font-size: 20px;
+    font-weight: 200;
+    }
+    </style>
+    <header>
+        <h1>С днём защитника отечества!</h1>
+    </header>    
+    <div class="main-info">
+        <p>23 февраля в России и ряде других стран постсоветского пространства отмечается День защитника Отечества.<br> Он учрежден 27 января 1922 в Российской Социалистической Федеративной Советской Республике (РСФСР). Соотносится непосредственно с Красной армией, датой ее формирования и сражениями с Германской имперской армии в феврале 1918. <br>
+        День защитника Отечества в нашей стране отмечается уже более 100 лет.<br> 23 февраля служит главным образом символом памяти и уважения истории России, героев, которые имели мужество встать на защиту своей Родины. Цель проведения праздничных мероприятий – просвещение младшего поколения, воспитание правильных ценностей и патриотизма, а также удостаивание чести военнослужащих.</p>
+        <img src="https://narzur.ru/wp-content/uploads/2020/02/besplatnaya-virtualnaya-otkritka-s-23-fevralya.orig1_-e1582445183204.jpg" alt="">
+        
+    </div>
+
+    <footer>
+    
+    </footer>
+</body>
+</html>
