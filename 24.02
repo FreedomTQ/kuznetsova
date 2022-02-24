@@ -1,0 +1,547 @@
+
+<?php
+$sn="localhost";
+$db="";
+$u="root";
+$p="";
+
+$my_sqli_connect($sn, $db, $u, $p);
+
+$evaluations = $db->query("SELECT * FROM `evaluations`");
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/css.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портал | Успеваемость</title>
+</head>
+
+<body>
+  
+
+    <div class="full-block">
+
+    <div class="tabs">
+    <ul>
+	<li class="active_2"><a href="marks.php">Успеваемость</a></li>
+    <li><a href="static.php">Статистика</a></li>
+    <li><a href="final_round.php">Итоговые</a></li>
+    <li id="get_money"><a href="#" >Рейтинг</a></li>
+    </ul>
+    </div>
+
+    <div class="marks_tables">
+
+    <div class="all-block">
+    <h3>Понедельник, дата</h3>
+    <!-- 1 день-понедельник -->
+
+    <div class="days">
+    
+    <table>
+    <tbody>
+    <!-- 1 урок-->
+    <tr>
+    <?
+foreach($evaluations as $marks){
+    echo "<tr>
+    <th scope='row'>".$marks['id_stud']."</th>
+    <td>".$marks['id_teach']."</td>
+    <td>".$marks['Evaluation']."</td>
+    <td>".$marks['Date']."</td>
+  </tr>";  
+}?>
+    </tr>
+        <!-- 2 урок-->
+    <tr>
+    <td width="25%"><a href="#" class="">Предмет</a></td>
+    <td width="15%"></td>
+    <td width="15%"><a href="#" class="">Оценка</a></td>
+    <td width="25%"></td>
+    <td width="30%"><a href="#" class="">ДЗ</a></td>
+    </tr>
+        <!-- 3 урок-->
+        <tr>
+    <td width="25%"><a href="#" class="">Предмет</a></td>
+    <td width="15%"></td>
+    <td width="15%"><a href="#" class="">Оценка</a></td>
+    <td width="25%"></td>
+    <td width="30%"><a href="#" class="">ДЗ</a></td>
+    </tr>
+        <!-- 4 урок-->
+        <tr>
+    <td width="25%"><a href="#" class="">Предмет</a></td>
+    <td width="15%"></td>
+    <td width="15%"><a href="#" class="">Оценка</a></td>
+    <td width="25%"></td>
+    <td width="30%"><a href="#" class="">ДЗ</a></td>
+    </tr>
+        <!-- 5 урок-->
+        <tr>
+    <td width="25%"><a href="#" class="">Предмет</a></td>
+    <td width="15%"></td>
+    <td width="15%"><a href="#" class="">Оценка</a></td>
+    <td width="25%"></td>
+    <td width="30%"><a href="#" class="">ДЗ</a></td>
+    </tr>
+        <!-- 6 урок-->
+        <tr>
+    <td width="25%"><a href="#" class="">Предмет</a></td>
+    <td width="15%"></td>
+    <td width="15%"><a href="#" class="">Оценка</a></td>
+    <td width="25%"></td>
+    <td width="30%"><a href="#" class="">ДЗ</a></td>
+    </tr>
+        <!-- 7 урок-->
+        <tr>
+    <td width="25%"><a href="#" class="">Предмет</a></td>
+    <td width="15%"></td>
+    <td width="15%"><a href="#" class="">Оценка</a></td>
+    <td width="25%"></td>
+    <td width="30%"><a href="#" class="">ДЗ</a></td>
+    </tr>
+        <!-- 8 урок(макс)-->
+        <tr>
+    <td width="25%"><a href="#" class="">Предмет</a></td>
+    <td width="15%"></td>
+    <td width="15%"><a href="#" class="">Оценка</a></td>
+    <td width="25%"></td>
+    <td width="30%"><a href="#" class="">ДЗ</a></td>
+    </tr>
+
+    </table>
+    </tbody>
+    </div>
+
+    </div>
+
+    <div class="all-block">
+
+    <h3>Вторник, дата</h3>
+    <!-- 2 день-вторник -->
+
+
+    <div class="days">
+    <table>
+    <tbody>
+    <!-- 1 урок-->
+    <tr>
+    <td width="25%"><a href="#" class="">Предмет</a></td>
+    <td width="15%"></td>
+    <td width="15%"><a href="#" class="">Оценка</a></td>
+    <td width="25%"></td>
+    <td width="30%"><a href="#" class="">ДЗ</a></td>
+    </tr>
+        <!-- 2 урок-->
+        <tr>
+    <td width="25%"><a href="#" class="">Предмет</a></td>
+    <td width="15%"></td>
+    <td width="15%"><a href="#" class="">Оценка</a></td>
+    <td width="25%"></td>
+    <td width="30%"><a href="#" class="">ДЗ</a></td>
+    </tr>
+        <!-- 3 урок-->
+        <tr>
+    <td width="25%"><a href="#" class="">Предмет</a></td>
+    <td width="15%"></td>
+    <td width="15%"><a href="#" class="">Оценка</a></td>
+    <td width="25%"></td>
+    <td width="30%"><a href="#" class="">ДЗ</a></td>
+    </tr>
+        <!-- 4 урок-->
+        <tr>
+    <td width="25%"><a href="#" class="">Предмет</a></td>
+    <td width="15%"></td>
+    <td width="15%"><a href="#" class="">Оценка</a></td>
+    <td width="25%"></td>
+    <td width="30%"><a href="#" class="">ДЗ</a></td>
+    </tr>
+        <!-- 5 урок-->
+        <tr>
+    <td width="25%"><a href="#" class="">Предмет</a></td>
+    <td width="15%"></td>
+    <td width="15%"><a href="#" class="">Оценка</a></td>
+    <td width="25%"></td>
+    <td width="30%"><a href="#" class="">ДЗ</a></td>
+    </tr>
+        <!-- 6 урок-->
+        <tr>
+    <td width="25%"><a href="#" class="">Предмет</a></td>
+    <td width="15%"></td>
+    <td width="15%"><a href="#" class="">Оценка</a></td>
+    <td width="25%"></td>
+    <td width="30%"><a href="#" class="">ДЗ</a></td>
+    </tr>
+        <!-- 7 урок-->
+        <tr>
+    <td width="25%"><a href="#" class="">Предмет</a></td>
+    <td width="15%"></td>
+    <td width="15%"><a href="#" class="">Оценка</a></td>
+    <td width="25%"></td>
+    <td width="30%"><a href="#" class="">ДЗ</a></td>
+    </tr>
+        <!-- 8 урок(макс)-->
+        <tr>
+    <td width="25%"><a href="#" class="">Предмет</a></td>
+    <td width="15%"></td>
+    <td width="15%"><a href="#" class="">Оценка</a></td>
+    <td width="25%"></td>
+    <td width="30%"><a href="#" class="">ДЗ</a></td>
+    </tr>
+    </tbody>
+    </table>
+
+    </div>
+
+
+    </div>
+
+    <div class="all-block">
+
+    <h3>Среда, дата</h3>
+    <!-- 3 день-среда -->
+
+    <div class="days">
+    <table>
+    <tbody>
+    <!-- 1 урок-->
+    <tr>
+    <td width="25%"><a href="#" class="">Предмет</a></td>
+    <td width="15%"></td>
+    <td width="15%"><a href="#" class="">Оценка</a></td>
+    <td width="25%"></td>
+    <td width="30%"><a href="#" class="">ДЗ</a></td>
+    </tr>
+        <!-- 2 урок-->
+        <tr>
+    <td width="25%"><a href="#" class="">Предмет</a></td>
+    <td width="15%"></td>
+    <td width="15%"><a href="#" class="">Оценка</a></td>
+    <td width="25%"></td>
+    <td width="30%"><a href="#" class="">ДЗ</a></td>
+    </tr>
+        <!-- 3 урок-->
+        <tr>
+    <td width="25%"><a href="#" class="">Предмет</a></td>
+    <td width="15%"></td>
+    <td width="15%"><a href="#" class="">Оценка</a></td>
+    <td width="25%"></td>
+    <td width="30%"><a href="#" class="">ДЗ</a></td>
+    </tr>
+        <!-- 4 урок-->
+        <tr>
+    <td width="25%"><a href="#" class="">Предмет</a></td>
+    <td width="15%"></td>
+    <td width="15%"><a href="#" class="">Оценка</a></td>
+    <td width="25%"></td>
+    <td width="30%"><a href="#" class="">ДЗ</a></td>
+    </tr>
+        <!-- 5 урок-->
+        <tr>
+    <td width="25%"><a href="#" class="">Предмет</a></td>
+    <td width="15%"></td>
+    <td width="15%"><a href="#" class="">Оценка</a></td>
+    <td width="25%"></td>
+    <td width="30%"><a href="#" class="">ДЗ</a></td>
+    </tr>
+        <!-- 6 урок-->
+        <tr>
+    <td width="25%"><a href="#" class="">Предмет</a></td>
+    <td width="15%"></td>
+    <td width="15%"><a href="#" class="">Оценка</a></td>
+    <td width="25%"></td>
+    <td width="30%"><a href="#" class="">ДЗ</a></td>
+    </tr>
+        <!-- 7 урок-->
+        <tr>
+    <td width="25%"><a href="#" class="">Предмет</a></td>
+    <td width="15%"></td>
+    <td width="15%"><a href="#" class="">Оценка</a></td>
+    <td width="25%"></td>
+    <td width="30%"><a href="#" class="">ДЗ</a></td>
+    </tr>
+        <!-- 8 урок(макс)-->
+        <tr>
+    <td width="25%"><a href="#" class="">Предмет</a></td>
+    <td width="15%"></td>
+    <td width="15%"><a href="#" class="">Оценка</a></td>
+    <td width="25%"></td>
+    <td width="30%"><a href="#" class="">ДЗ</a></td>
+    </tr>
+    </table>
+    </tbody>
+
+
+    </div>
+
+    </div>
+
+    <div class="all-block">
+
+    <h3>Четверг, дата</h3>  
+    <!-- 4 день-четверг -->
+
+    <div class="days">
+
+    <table>
+    <tbody>
+    <!-- 1 урок-->
+    <tr>
+    <td width="25%"><a href="#" class="">Предмет</a></td>
+    <td width="15%"></td>
+    <td width="15%"><a href="#" class="">Оценка</a></td>
+    <td width="25%"></td>
+    <td width="30%"><a href="#" class="">ДЗ</a></td>
+    </tr>
+        <!-- 2 урок-->
+        <tr>
+    <td width="25%"><a href="#" class="">Предмет</a></td>
+    <td width="15%"></td>
+    <td width="15%"><a href="#" class="">Оценка</a></td>
+    <td width="25%"></td>
+    <td width="30%"><a href="#" class="">ДЗ</a></td>
+    </tr>
+        <!-- 3 урок-->
+        <tr>
+    <td width="25%"><a href="#" class="">Предмет</a></td>
+    <td width="15%"></td>
+    <td width="15%"><a href="#" class="">Оценка</a></td>
+    <td width="25%"></td>
+    <td width="30%"><a href="#" class="">ДЗ</a></td>
+    </tr>
+        <!-- 4 урок-->
+        <tr>
+    <td width="25%"><a href="#" class="">Предмет</a></td>
+    <td width="15%"></td>
+    <td width="15%"><a href="#" class="">Оценка</a></td>
+    <td width="25%"></td>
+    <td width="30%"><a href="#" class="">ДЗ</a></td>
+    </tr>
+        <!-- 5 урок-->
+        <tr>
+    <td width="25%"><a href="#" class="">Предмет</a></td>
+    <td width="15%"></td>
+    <td width="15%"><a href="#" class="">Оценка</a></td>
+    <td width="25%"></td>
+    <td width="30%"><a href="#" class="">ДЗ</a></td>
+    </tr>
+        <!-- 6 урок-->
+        <tr>
+    <td width="25%"><a href="#" class="">Предмет</a></td>
+    <td width="15%"></td>
+    <td width="15%"><a href="#" class="">Оценка</a></td>
+    <td width="25%"></td>
+    <td width="30%"><a href="#" class="">ДЗ</a></td>
+    </tr>
+        <!-- 7 урок-->
+        <tr>
+    <td width="25%"><a href="#" class="">Предмет</a></td>
+    <td width="15%"></td>
+    <td width="15%"><a href="#" class="">Оценка</a></td>
+    <td width="25%"></td>
+    <td width="30%"><a href="#" class="">ДЗ</a></td>
+    </tr>
+        <!-- 8 урок(макс)-->
+        <tr>
+    <td width="25%"><a href="#" class="">Предмет</a></td>
+    <td width="15%"></td>
+    <td width="15%"><a href="#" class="">Оценка</a></td>
+    <td width="25%"></td>
+    <td width="30%"><a href="#" class="">ДЗ</a></td>
+    </tr>
+    </table>
+    </tbody>
+
+
+    </div>
+
+    </div>
+
+
+    <div class="all-block">
+    <h3>Пятница, дата</h3>
+    <!-- 5 день-пятница -->
+    
+    <div class="days">
+
+    <table>
+    <tbody>
+    <!-- 1 урок-->
+    <tr>
+    <td width="25%"><a href="#" class="">Предмет</a></td>
+    <td width="15%"></td>
+    <td width="15%"><a href="#" class="">Оценка</a></td>
+    <td width="25%"></td>
+    <td width="30%"><a href="#" class="">ДЗ</a></td>
+    </tr>
+        <!-- 2 урок-->
+        <tr>
+    <td width="25%"><a href="#" class="">Предмет</a></td>
+    <td width="15%"></td>
+    <td width="15%"><a href="#" class="">Оценка</a></td>
+    <td width="25%"></td>
+    <td width="30%"><a href="#" class="">ДЗ</a></td>
+    </tr>
+        <!-- 3 урок-->
+        <tr>
+    <td width="25%"><a href="#" class="">Предмет</a></td>
+    <td width="15%"></td>
+    <td width="15%"><a href="#" class="">Оценка</a></td>
+    <td width="25%"></td>
+    <td width="30%"><a href="#" class="">ДЗ</a></td>
+    </tr>
+        <!-- 4 урок-->
+        <tr>
+    <td width="25%"><a href="#" class="">Предмет</a></td>
+    <td width="15%"></td>
+    <td width="15%"><a href="#" class="">Оценка</a></td>
+    <td width="25%"></td>
+    <td width="30%"><a href="#" class="">ДЗ</a></td>
+    </tr>
+        <!-- 5 урок-->
+        <tr>
+    <td width="25%"><a href="#" class="">Предмет</a></td>
+    <td width="15%"></td>
+    <td width="15%"><a href="#" class="">Оценка</a></td>
+    <td width="25%"></td>
+    <td width="30%"><a href="#" class="">ДЗ</a></td>
+    </tr>
+        <!-- 6 урок-->
+        <tr>
+    <td width="25%"><a href="#" class="">Предмет</a></td>
+    <td width="15%"></td>
+    <td width="15%"><a href="#" class="">Оценка</a></td>
+    <td width="25%"></td>
+    <td width="30%"><a href="#" class="">ДЗ</a></td>
+    </tr>
+        <!-- 7 урок-->
+        <tr>
+    <td width="25%"><a href="#" class="">Предмет</a></td>
+    <td width="15%"></td>
+    <td width="15%"><a href="#" class="">Оценка</a></td>
+    <td width="25%"></td>
+    <td width="30%"><a href="#" class="">ДЗ</a></td>
+    </tr>
+        <!-- 8 урок(макс)-->
+        <tr>
+    <td width="25%"><a href="#" class="">Предмет</a></td>
+    <td width="15%"></td>
+    <td width="15%"><a href="#" class="">Оценка</a></td>
+    <td width="25%"></td>
+    <td width="30%"><a href="#" class="">ДЗ</a></td>
+    </tr>
+
+    </table>
+    </tbody>
+
+    </div>
+
+    </div>
+
+
+    <div class="all-block">
+    <!-- 6 день-суббота -->
+<h3>Суббота, дата</h3>
+<div class="days">
+
+    <table>
+    <tbody>
+    <!-- 1 урок-->
+    <tr>
+    <td width="25%"><a href="#" class="">Предмет</a></td>
+    <td width="15%"></td>
+    <td width="15%"><a href="#" class="">Оценка</a></td>
+    <td width="25%"></td>
+    <td width="30%"><a href="#" class="">ДЗ</a></td>
+    </tr>
+        <!-- 2 урок-->
+        <tr>
+    <td width="25%"><a href="#" class="">Предмет</a></td>
+    <td width="15%"></td>
+    <td width="15%"><a href="#" class="">Оценка</a></td>
+    <td width="25%"></td>
+    <td width="30%"><a href="#" class="">ДЗ</a></td>
+    </tr>
+        <!-- 3 урок-->
+        <tr>
+    <td width="25%"><a href="#" class="">Предмет</a></td>
+    <td width="15%"></td>
+    <td width="15%"><a href="#" class="">Оценка</a></td>
+    <td width="25%"></td>
+    <td width="30%"><a href="#" class="">ДЗ</a></td>
+    </tr>
+        <!-- 4 урок-->
+        <tr>
+    <td width="25%"><a href="#" class="">Предмет</a></td>
+    <td width="15%"></td>
+    <td width="15%"><a href="#" class="">Оценка</a></td>
+    <td width="25%"></td>
+    <td width="30%"><a href="#" class="">ДЗ</a></td>
+    </tr>
+        <!-- 5 урок-->
+        <tr>
+    <td width="25%"><a href="#" class="">Предмет</a></td>
+    <td width="15%"></td>
+    <td width="15%"><a href="#" class="">Оценка</a></td>
+    <td width="25%"></td>
+    <td width="30%"><a href="#" class="">ДЗ</a></td>
+    </tr>
+        <!-- 6 урок-->
+        <tr>
+    <td width="25%"><a href="#" class="">Предмет</a></td>
+    <td width="15%"></td>
+    <td width="15%"><a href="#" class="">Оценка</a></td>
+    <td width="25%"></td>
+    <td width="30%"><a href="#" class="">ДЗ</a></td>
+    </tr>
+        <!-- 7 урок-->
+        <tr>
+    <td width="25%"><a href="#" class="">Предмет</a></td>
+    <td width="15%"></td>
+    <td width="15%"><a href="#" class="">Оценка</a></td>
+    <td width="25%"></td>
+    <td width="30%"><a href="#" class="">ДЗ</a></td>
+    </tr>
+        <!-- 8 урок(макс)-->
+        <tr>
+    <td width="25%"><a href="#" class="">Предмет</a></td>
+    <td width="15%"></td>
+    <td width="15%"><a href="#" class="">Оценка</a></td>
+    <td width="25%"></td>
+    <td width="30%"><a href="#" class="">ДЗ</a></td>
+    </tr>
+    </table>
+    </tbody>
+
+    </div>
+
+    </div>
+
+    <!-- 7 день-воскресенье -->
+
+    
+    <div class="all-block">
+    <h3>Воскресенье, дата</h3>
+    <div class="days" id="special">
+    <p>Выходной день</p>
+    
+    </div>
+
+    </div>
+
+
+    </tbody>    
+    </table>
+    
+
+    </div>
+    </div>
+
+</body>
+
+</html>
